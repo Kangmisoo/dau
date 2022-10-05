@@ -7,11 +7,29 @@
     <meta name="author" content="강미수" />
     <meta name="keywordes" content="빅데이터, django, python" />
     <title>Welcome to Misoo shopping Mall</title>
+    <script src="https://kit.fontawesome.com/9a4be176b7.js" crossorigin="anonymous"></script>
+    <style>
+        header,footer{
+            height: 100px;
+        }
+        nav{
+            height: 50px;
+        }
+        section{
+            display: flex;
+        }
+        .content{
+            flex: 4;
+        }
+        aside{
+            flex: 1;
+        }
+    </style>
 </head>
 <body>
 <!--header>header+nav+section>article*3+aside^footer --> 
 <header id="home">
-<img src="../images/logo.jpg" />
+<img src="./images/logo.jpg" />
 <h1> Misoo Site</h1>
     </header>
     <nav>
@@ -25,9 +43,10 @@
      </ul>
     </nav>
     <section>
+        <div class="content">
      <article>
         <div class="photo"> <!-- . :class, # : id-->
-            <img src="../images/bigdata.jpg" alt="bigdata 이미지">
+            <img src="./images/bigdata.jpg" alt="bigdata 이미지">
         </div> 
 <div class="action">
     <h2>대외활동리스트
@@ -76,8 +95,11 @@
     </article>
     <aside>
         <div class="login">
-            <form action="#" method="get">
-                <input type="text" name="'id"><br>
+            <form action="#" method="post">
+                회원ID:<input type="text" name="'id"><br>
+                비밀번호:<input type="password" name="pw" id=""><br>
+                <input type="submit" value="제출" >
+                <input type="button" value="회원가입">
             </form>
         </div>
 
@@ -91,9 +113,11 @@
 </section>
 <footer>
     copyight강미수
+    <div class="sns">
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+    </div>
 </footer>
-    
-    
-
 </body>
 </html>
